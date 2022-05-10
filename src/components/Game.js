@@ -6,7 +6,6 @@ import { chooseItem } from '../actions';
 import { connect } from 'react-redux';
 
 const Game = (props) => {
-  console.log(props);
   const stepChoose = () => {
     return <Choose chooseItem={props.chooseItem} />;
   };

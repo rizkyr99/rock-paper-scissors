@@ -70,7 +70,6 @@ const Wait = ({ item, addScore, playAgain }) => {
   const setScore = () => {
     const result = housePick();
     setResult(result);
-    console.log(result);
     switch (result) {
       case 'win':
         addScore();

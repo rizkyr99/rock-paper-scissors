@@ -196,7 +196,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 300px;
+  width: 90%;
+  max-width: 300px;
   text-align: center;
 }
 
@@ -213,5 +214,43 @@ body {
   font-size: 48px;
   margin-bottom: 20px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 426px) {
+  .header {
+    width: 90%;
+    padding: 10px;
+  }
+  .header .title {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 10px;
+  }
+  .score {
+    padding: 0 20px;
+  }
+  .score-title {
+    font-size: 12px;
+  }
+  .score-count {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .game-container {
+    width: 90%;
+    height: 90vw;
+  }
+  .game-button {
+    padding: 15px;
+  }
+  .game-button-icon {
+    width: 100px;
+    height: 100px;
+  }
+  .game-button.rock {
+    left: 0;
+    bottom: 0;
+    left: calc(50% - 65px);
+  }
 }
 /*# sourceMappingURL=App.css.map */
