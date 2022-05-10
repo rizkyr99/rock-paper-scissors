@@ -73,6 +73,8 @@ const Wait = ({ item, addScore, playAgain }) => {
     switch (result) {
       case 'win':
         addScore();
+      default:
+        return null;
     }
   };
 
