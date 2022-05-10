@@ -1,12 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Score = () => {
+const Score = (props) => {
   return (
     <div className='score'>
       <div className='score-title'>SCORE</div>
-      <div className='score-count'>12</div>
+      <div className='score-count'>{props.score}</div>
     </div>
   );
 };
 
-export default Score;
+const mapStateToProps = (state) => {
+  return {
+    score: state.score,
+  };
+};
+
+export default connect(mapStateToProps)(Score);

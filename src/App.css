@@ -22,6 +22,8 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: radial-gradient(circle at top, #1f3756, #141539) no-repeat;
 }
 
@@ -30,6 +32,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -93,5 +99,119 @@ body {
   line-height: 60px;
   font-weight: 700;
   color: #3b4363;
+}
+
+.game-container {
+  position: relative;
+  margin-top: 60px;
+  height: 420px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.game-button {
+  display: inline-block;
+  position: absolute;
+  padding: 22px;
+  border-radius: 50%;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+.game-button.active {
+  top: 0 !important;
+  left: 0 !important;
+  right: unset !important;
+  bottom: unset !important;
+}
+
+.game-button.house {
+  right: 0;
+  left: unset !important;
+  top: 0;
+  bottom: unset !important;
+}
+
+.game-button.rock {
+  left: 0;
+  bottom: 0;
+  left: calc(50% - 95px);
+  background: -webkit-gradient(linear, left top, left bottom, from(#dc2e4e), to(#dd405d));
+  background: linear-gradient(#dc2e4e, #dd405d);
+  -webkit-box-shadow: 0 8px 0 #a4233b;
+          box-shadow: 0 8px 0 #a4233b;
+}
+
+.game-button.paper {
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4865f4), to(#5671f5));
+  background: linear-gradient(#4865f4, #5671f5);
+  -webkit-box-shadow: 0 8px 0 #3c55d3;
+          box-shadow: 0 8px 0 #3c55d3;
+}
+
+.game-button.scissors {
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ec9e0e), to(#eca922));
+  background: linear-gradient(#ec9e0e, #eca922);
+  -webkit-box-shadow: 0 8px 0 #c27b00;
+          box-shadow: 0 8px 0 #c27b00;
+}
+
+.game-button-icon {
+  background-color: #fff;
+  height: 150px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2) inset;
+          box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.game-button-icon img {
+  width: 65px;
+}
+
+.result-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  text-align: center;
+}
+
+.play-button {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #fff;
+  color: #dd405d;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.result {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=App.css.map */

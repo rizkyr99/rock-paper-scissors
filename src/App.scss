@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 // VARIABLES
-$scissors-gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
-$paper-gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
-$rock-gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+$scissors-gradient: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+$paper-gradient: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+$rock-gradient: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
 $lizard-gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
 $cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
 
@@ -40,12 +40,15 @@ html {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background: radial-gradient(circle at top, $radial-gradient) no-repeat;
 }
 
 .container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -90,4 +93,95 @@ body {
   line-height: 60px;
   font-weight: 700;
   color: $dark-text;
+}
+
+.game-container {
+  position: relative;
+  margin-top: 60px;
+  height: 420px;
+  width: 100%;
+  max-width: 460px;
+}
+
+.game-button {
+  display: inline-block;
+  position: absolute;
+  padding: 22px;
+  border-radius: 50%;
+  transition: 200ms;
+}
+
+.game-button.active {
+  top: 0 !important;
+  left: 0 !important;
+  right: unset !important;
+  bottom: unset !important;
+}
+
+.game-button.house {
+  right: 0;
+  left: unset !important;
+  top: 0;
+  bottom: unset !important;
+}
+
+.game-button.rock {
+  left: 0;
+  bottom: 0;
+  left: calc(50% - 95px);
+  background: linear-gradient($rock-gradient);
+  box-shadow: 0 8px 0 hsl(349, 65%, 39%);
+}
+.game-button.paper {
+  left: 0;
+  background: linear-gradient($paper-gradient);
+  box-shadow: 0 8px 0 hsl(230, 63%, 53%);
+}
+.game-button.scissors {
+  right: 0;
+  background: linear-gradient($scissors-gradient);
+  box-shadow: 0 8px 0 hsl(38, 100%, 38%);
+}
+
+.game-button-icon {
+  background-color: #fff;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.game-button-icon img {
+  width: 65px;
+}
+
+.result-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+}
+
+.play-button {
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #fff;
+  color: hsl(349, 70%, 56%);
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.result {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
