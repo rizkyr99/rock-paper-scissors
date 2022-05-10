@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+// VARIABLES
+$scissors-gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+$paper-gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+$rock-gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+$lizard-gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+$cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+$dark-text: hsl(229, 25%, 31%);
+$score-text: hsl(229, 64%, 46%);
+$header-outline: hsl(217, 16%, 45%);
+
+$radial-gradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+
+$font-family: 'Barlow Semi Condensed', sans-serif;
+$font-weights: 600, 700;
+
+// RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+// BASIC
+html {
+  font-family: $font-family;
+  color: #fff;
+}
+
+body {
+  background: radial-gradient(circle at top, $radial-gradient) no-repeat;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 15px 20px;
+  border: 3px solid $header-outline;
+  border-radius: 15px;
+}
+
+.header .title {
+  padding: 15px 10px;
+  font-size: 36px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 45px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.score-title {
+  color: $score-text;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.score-count {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  color: $dark-text;
+}
